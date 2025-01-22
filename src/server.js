@@ -23,7 +23,6 @@ app.get('/uczniowie', (req, res) => {
   db.query('SELECT * FROM uczniowie', (err, results) => {
     if (err) throw err;
     res.json(results);
-    console.log(results);
   });
 });
 

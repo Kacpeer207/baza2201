@@ -3,7 +3,12 @@ import axios from 'axios';
 
 function FilmManager() {
   const [uczniowie, setUczniowie] = useState([]);
-
+  const [formData, setFormData] = useState({
+    id: '',
+    imie: '',
+    nazwisko: '',
+    data_urodzenia: '',
+  });
   useEffect(() => {
     fetchUczniowie();
   }, []);
